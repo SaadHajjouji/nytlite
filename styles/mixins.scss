@@ -1,0 +1,116 @@
+@import "./variables.scss";
+// media queries
+@mixin respond($breakpoint) {
+  @if $breakpoint==phone {
+    @media (max-width: 37.5em) {
+      //600px
+      @content;
+    }
+  }
+  @if $breakpoint==minPhone {
+    @media (min-width: 75em) {
+      @content;
+    }
+  }
+  @if $breakpoint==tab-port {
+    @media (max-width: 56.25em) {
+      // 900px
+      @content;
+    }
+  }
+  @if $breakpoint==tab-land {
+    @media (max-width: 75em) {
+      // 1200px
+      @content;
+    }
+  }
+  @if $breakpoint==normalweb {
+    @media (min-width: 76em) {
+      // 1200px
+      @content;
+    }
+  }
+  @if $breakpoint==big-desktop {
+    @media (min-width: 95em) {
+      // 1800px
+      @content;
+    }
+  }
+}
+
+// header buttons
+@mixin headerBtns {
+  border-radius: 3px;
+  line-height: 11px;
+  font-weight: 700;
+}
+
+@mixin footerContent {
+  h3 {
+    margin-bottom: 5px;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: $p-color;
+    font-family: unset;
+    cursor: pointer;
+  }
+}
+
+@mixin minread($min) {
+  &::after {
+    content: $min;
+    display: block;
+    color: rgb(128, 128, 128);
+    font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: 3px;
+  }
+}
+
+@mixin newsText {
+  @include respond(phone) {
+    h2,
+    h3 {
+      font-size: 1.2rem !important;
+    }
+    p {
+      font-size: 14px;
+    }
+    span {
+      font-size: 13.4px;
+    }
+  }
+  p {
+    font-size: 14.5px;
+  }
+  span {
+    font-size: 13.2px;
+    font-family: Helvetica;
+  }
+  h2,
+  h3 {
+    font-size: 1.32rem;
+  }
+  span,
+  h2,
+  p {
+    margin-top: 8px;
+    display: block;
+  }
+  h3 {
+    display: block;
+    margin-top: 8px;
+  }
+  p,
+  .author1 {
+    color: $p-color;
+  }
+  .author2 {
+    color: #838383;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+}

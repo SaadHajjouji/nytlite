@@ -1,0 +1,75 @@
+@import "./mixins.scss";
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@600&family=Lora:wght@500&display=swap");
+html,
+body {
+  background-color: white;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+
+button {
+  background-color: unset;
+  border: unset;
+  cursor: pointer;
+}
+html {
+  padding-inline: 12rem !important;
+
+  @include respond(phone) {
+    padding-inline: 1rem !important;
+  }
+  @include respond(tab-port) {
+    padding-inline: 1rem !important;
+  }
+  @include respond(tab-land) {
+    padding-inline: 1rem !important;
+  }
+}
+ul,
+form,
+h3,
+p,
+h4,
+h5,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+  color: black;
+}
+li {
+  list-style-type: none;
+}
+h3,
+h4,
+h2 {
+  font-family: "Domine";
+}
+p {
+  font-family: "Lora";
+}
+div{
+  background-color: white;
+  color: black;
+}

@@ -1,0 +1,187 @@
+@import "../../styles/mixins.scss";
+
+@import "../../styles/variables.scss";
+.generalLayout {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-column-gap: 15px;
+  @include respond(tab-land) {
+    display: flex;
+    flex-direction: column;
+  }
+  .leftSection {
+    border-right: 1px solid $border;
+    grid-column: span 14;
+    padding-right: 20px;
+    @include respond(tab-land) {
+      padding-right: unset;
+      border-right: unset;
+    }
+  }
+  .rightSection {
+    margin-left: 5px;
+    grid-column: span 6;
+  }
+}
+
+.EntertainmentSection {
+  padding-top: 1.4rem;
+  border-top: 1px solid rgb(0, 0, 0);
+  .section1 {
+    @include respond(tab-land) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      .section1Titles {
+        width: 37%;
+      }
+    }
+    @include respond(phone) {
+      display: unset !important;
+      .section1Titles {
+        width: unset !important;
+      }
+    }
+    h3 {
+      margin-top: 11px;
+      font-weight: 100;
+      letter-spacing: 1.4px;
+    }
+    p {
+      color: $p-color;
+      margin-top: 9px;
+      font-size: $size-medium;
+      @include minread("6 min read");
+    }
+  }
+  .miniSectionWrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid $border;
+    h3 {
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .section2 {
+      border-right: 1px solid $border;
+      padding-right: 1rem;
+      @include minread("6 min read");
+    }
+    .section3 {
+      margin-left: 1rem;
+      @include minread("4 min read");
+    }
+  }
+}
+
+.electionsSection {
+  margin-top: 1.3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-top: 1px solid $border;
+  padding-top: 13px;
+
+  h3 {
+    font-size: 14px;
+    color: #000000;
+    font-family: "Lora";
+    @include minread("4 min read");
+    &:first-child {
+      border-right: 1px solid rgb(192, 192, 192);
+      padding-right: 1rem;
+    }
+    &:nth-child(2) {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.opinionSection {
+  padding-top: 1rem;
+  margin-top: 1.3rem;
+  border-top: 1px solid rgb(0, 0, 0);
+  .opinionSectionWrapper {
+    @include respond(tab-land) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    @include respond(phone) {
+      display: unset !important;
+    }
+  }
+
+  .sectionHeader {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .opinionArticle {
+    @include respond(tab-land) {
+      width: 46%;
+    }
+    @include respond(phone) {
+      width: unset !important;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 12px;
+    gap: 9px;
+    padding-bottom: 12px;
+    &:not(:last-child) {
+      border-bottom: 1px solid $border;
+    }
+    .opinionContent {
+      min-width: 50%;
+    }
+    .authorName {
+      color: $p-color;
+      font-family: $lora;
+      font-weight: 100;
+      font-size: 13px;
+      letter-spacing: 1.2px;
+    }
+    h5 {
+      font-family: $domine;
+      margin-top: 5.3px;
+      font-size: 1rem;
+      @include minread("5 min read");
+    }
+  }
+}
+
+.moreNewsSection {
+  padding-top: 1rem;
+  margin-top: 1.3rem;
+  border-top: 1px solid rgb(0, 0, 0);
+  h4 {
+    text-transform: capitalize;
+  }
+  .moreNewsWrapper {
+    margin-top: 12px;
+
+    .moreNewsWrapper1,
+    .moreNewsWrapper2 {
+      display: flex;
+      > :first-child {
+        padding-right: 9px;
+        border-right: 1px solid $border;
+      }
+      > :nth-child(2) {
+        margin-left: 9px;
+      }
+    }
+    .moreNewsWrapper1 {
+      padding-bottom: 11px;
+      border-bottom: 1px solid $border;
+    }
+    .moreNewsWrapper2 {
+      margin-top: 11px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
+
+.main {
+  margin-top: 4rem;
+}
+.headingPrimary {
+  font-family: $lora;
+  font-size: 40px;
+  font-weight: lighter;
+  letter-spacing: 1.4px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid $border;
+  text-transform: capitalize;
+}
+
+.mainNewsSection {
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    .newsText {
+      width: 100% !important;
+    }
+    .mainNewsMedia {
+      width: 100% !important;
+    }
+  }
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  .newsText {
+    width: 40%;
+  }
+  .mainNewsMedia {
+    width: 50%;
+  }
+}
+.moreNewsSection {
+  @include respond(phone) {
+    display: block !important;
+    margin-top: 1rem !important;
+  }
+  @include respond(tab-port) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $border;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+.lastNewsSection {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  @include respond(tab-port) {
+    display: unset;
+
+  }
+
+}
+.newsText {
+  @include newsText();
+}

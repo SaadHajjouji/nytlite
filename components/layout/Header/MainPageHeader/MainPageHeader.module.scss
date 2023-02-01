@@ -1,0 +1,94 @@
+@import "../../../../styles/mixins.scss";
+
+.desktopHeader {
+  @include respond(tab-land) {
+    display: none;
+  }
+}
+
+.HeadertopSection {
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 33px;
+  //first part of the top header
+  .topNavigation {
+    flex: 1;
+    display: flex;
+    align-items: center;
+   
+  }
+
+
+}
+.HeaderBottomSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
+  border-bottom: 1px solid rgb(230, 227, 227);
+  padding-bottom: 6px;
+  .dateAndPaperToday {
+    text-align: start;
+    font-size: 12px;
+    .dateToday {
+      font-weight: 700;
+      display: block;
+    }
+  }
+  .logo {
+    margin: 0 auto;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    span {
+      display: inline-block;
+      color: rgb(182, 179, 179);
+      font-weight: 500;
+    }
+    img {
+      display: inline-block;
+
+      width: 50rem;
+      height: 7.14rem;
+    }
+  }
+  .financeAndWeather {
+    text-align: end;
+    vertical-align: middle;
+
+    .sectionWrapper {
+      width: 6.5rem;
+      margin-left: auto;
+
+      .weatherInfo {
+        font-size: 10.6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        :nth-child(1),
+        :nth-child(2) {
+          font-weight: 500;
+          font-size: 13px;
+        }
+        img {
+          width: 30px;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+// helpers
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+// .backgroundColorClicked {
+//   background-color: #f7f7f7;
+// }
