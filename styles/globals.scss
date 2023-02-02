@@ -34,7 +34,7 @@ button {
   cursor: pointer;
 }
 html {
-  padding-inline: 12rem !important;
+  padding-inline: 9rem !important;
 
   @include respond(phone) {
     padding-inline: 1rem !important;
