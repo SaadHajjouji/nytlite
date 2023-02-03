@@ -2,9 +2,10 @@
 .lastNewsArticle {
   @include respond(tab-port) {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     flex-direction: row-reverse;
     gap: 1rem;
+    justify-content: center;
     margin-top: 1rem;
     &:not(:last-child) {
       padding-bottom: 1rem;
@@ -15,6 +16,9 @@
     }
   }
   h3 {
+    @include respond(tab-port) {
+      width: 50%;
+    }
     font-size: 1rem;
     margin-top: 9px;
   }
