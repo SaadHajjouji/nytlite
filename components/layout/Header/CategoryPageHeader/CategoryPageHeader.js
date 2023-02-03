@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 import MenuButton from "../../../ui/MenuButton";
 import SearchInput from "../../../ui/SearchInput";
@@ -14,7 +15,6 @@ const CategoryPageHeader = ({
   category,
   sections,
   setLoading,
-
 }) => {
   const [showSearchInput, setShowSearchInput] = useState(false);
   const [ShowMobileNavigation, setShowMobileNavigation] = useState(false);
@@ -51,12 +51,14 @@ const CategoryPageHeader = ({
           </div>
         </div>
         <div className={classes.logo}>
-          <Image
-            src={"/images/NewYorkTimes.svg"}
-            alt="newyorktimes logo"
-            width={200}
-            height={28.57}
-          />
+          <Link href="/">
+            <Image
+              src={"/images/NewYorkTimes.svg"}
+              alt="newyorktimes logo"
+              width={200}
+              height={28.57}
+            />
+          </Link>
         </div>
 
         <div className={classes.sublog}>
@@ -74,15 +76,11 @@ const CategoryPageHeader = ({
         setShowMobileNavigation={setShowMobileNavigation}
         sections={sections}
         setLoading={setLoading}
-      
-
       />
       <SideNavigation
         showSideNavDesktop={showSideNavDesktop}
         sections={sections}
         setLoading={setLoading}
-      
-
       />
     </header>
   );
