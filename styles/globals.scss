@@ -33,19 +33,7 @@ button {
   border: unset;
   cursor: pointer;
 }
-html {
-  padding-inline: 9rem !important;
 
-  @include respond(phone) {
-    padding-inline: 1rem !important;
-  }
-  @include respond(tab-port) {
-    padding-inline: 1rem !important;
-  }
-  @include respond(tab-land) {
-    padding-inline: 1rem !important;
-  }
-}
 ul,
 form,
 h3,
@@ -69,7 +57,7 @@ h2 {
 p {
   font-family: "Lora";
 }
-div{
+div {
   background-color: white;
   color: black;
 }

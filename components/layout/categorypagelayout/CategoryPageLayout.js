@@ -1,7 +1,7 @@
-import React, { Fragment } from "react";
 import CategoryPageHeader from "../Header/CategoryPageHeader/CategoryPageHeader";
 import DesktopFooter from "../Footer/DesktopFooter";
 import MobileFooter from "../Footer/MobileFooter";
+import classes from "../../../styles/pageInlinePadding.module.scss";
 const CategoryPageLayout = ({
   children,
   showSideNavDesktop,
@@ -11,7 +11,7 @@ const CategoryPageLayout = ({
   setLoading,
 }) => {
   return (
-    <Fragment>
+    <div className={classes.PageInlinePadding}>
       <CategoryPageHeader
         showSideNavDesktop={showSideNavDesktop}
         setshowSideNavDesktop={setshowSideNavDesktop}
@@ -22,7 +22,7 @@ const CategoryPageLayout = ({
       <main>{children}</main>
       <DesktopFooter sections={sections} setLoading={setLoading} />
       <MobileFooter sections={sections} setLoading={setLoading} />
-    </Fragment>
+    </div>
   );
 };
 

@@ -1,16 +1,20 @@
 import React from "react";
 import Image from "next/image";
-import classes from "./LoginPageHeader.module.scss"
+import classes from "./LoginPageHeader.module.scss";
+import Link from "next/link";
 const LoginPageHeader = () => {
   return (
     <header>
-      <div>
-        <Image
-          src={"/images/NewYorkTimes.svg"}
-          alt="newyorktimes logo"
-          width={400}
-          height={57.14}
-        />
+      <div className={classes.pageHead}>
+        <Link href={"/"}>
+          <Image
+            className={classes.logo}
+            src={"/images/NewYorkTimes.svg"}
+            alt="newyorktimes logo"
+            width={200}
+            height={28.57}
+          />
+        </Link>
       </div>
     </header>
   );
