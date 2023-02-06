@@ -1,8 +1,46 @@
+@import "../../styles/mixins.scss";
 .pageHeading {
   font-family: "Lora";
   font-weight: lighter;
   text-align: center;
+  font-size: 1.6rem;
 }
-.loginform{
-    
+.loginForm {
+  margin: 0 auto;
+  width: 28rem;
+  margin-top: 1.7rem;
+  @include respond(phone) {
+    width: 100%;
+    padding-inline: 1rem;
+  }
+  .FormInput {
+    display: block;
+    width: 100%;
+    label,
+    input {
+      width: inherit;
+    }
+    label {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    input {
+      margin-top: 8px;
+      height: 2.8rem;
+      border-radius: 3px;
+      padding-inline: 10px;
+      font-size: 1rem;
+    }
+  }
+  button {
+    color: black;
+    width: inherit;
+    background-color: black;
+    border-radius: 3px;
+    height: 2.8rem;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
 }
