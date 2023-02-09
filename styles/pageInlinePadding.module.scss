@@ -1,0 +1,14 @@
+@import "./mixins.scss";
+.PageInlinePadding {
+  padding-inline: 9rem !important;
+
+  @include respond(phone) {
+    padding-inline: 1rem !important;
+  }
+  @include respond(tab-port) {
+    padding-inline: 1rem !important;
+  }
+  @include respond(tab-land) {
+    padding-inline: 1rem !important;
+  }
+}

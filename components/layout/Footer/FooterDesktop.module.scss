@@ -29,3 +29,11 @@
 .line2 {
   border-top: 1px solid rgb(228, 227, 227);
 }
+.Disclaimer {
+  font-size: 10px;
+  color: $p-color;
+  padding: 1rem 0;
+  border-top: 1px solid $border;
+  width: 100%;
+  text-align: center;
+}

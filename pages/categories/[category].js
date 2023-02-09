@@ -4,13 +4,14 @@ import getTitles from "../../helpers/dataCenter";
 import Head from "next/head";
 import CategoryPageLayout from "../../components/layout/categorypagelayout/CategoryPageLayout";
 import CategoryPageMain from "../../components/categoryPage/CategoryPageMain";
+import Spinner from "../../helpers/Spinner";
 export default function Category(props) {
   const categoryData = props.data.results;
   const category = props.category;
   const [showSideNavDesktop, setshowSideNavDesktop] = useState(false);
   const [sections, setSections] = useState();
   const [loading, setLoading] = useState(false);
-  console.log(loading);
+
   useEffect(() => {
     fetchTitles();
   }, []);
@@ -26,7 +27,7 @@ export default function Category(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
-        "loading"
+        <Spinner/>
       ) : (
         <div onClickCapture={() => setshowSideNavDesktop(false)}>
           <CategoryPageLayout
@@ -53,7 +54,7 @@ export async function getStaticProps(context) {
       data: data.data,
       category: category,
     },
-    revalidate: 2,
+    revalidate: 60000,
   };
 }
 export async function getStaticPaths() {

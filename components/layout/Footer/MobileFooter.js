@@ -28,6 +28,10 @@ const MobileFooter = ({ sections, setLoading }) => {
             ))}
           </ul>
         </div>
+        <div className={classes.Disclaimer}>
+          This project is for learning purposes only. All rights go to The new
+          york times company.
+        </div>
       </div>
     );
 };

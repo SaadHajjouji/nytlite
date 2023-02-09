@@ -4,19 +4,24 @@ import { Fragment, useEffect, useState } from "react";
 import MainPageLayout from "../components/layout/mainpagelayout/MainPageLayout";
 import MainPage from "../components/mainPage/MainPage";
 import getTitles from "../helpers/dataCenter";
+import Spinner from "../helpers/Spinner";
+
 export default function Home(props) {
   const content = props.content;
   // state of side navigation
   const [showSideNavDesktop, setshowSideNavDesktop] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sections, setSections] = useState();
+
   useEffect(() => {
     fetchTitles();
   }, []);
+
   const fetchTitles = async () => {
     const data = await getTitles();
     setSections(data);
   };
+
   return (
     <Fragment>
       <Head>
@@ -25,7 +30,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {loading ? (
-        "loading"
+        <Spinner />
       ) : (
         <div onClickCapture={() => setshowSideNavDesktop(false)}>
           <MainPageLayout
@@ -52,6 +57,6 @@ export async function getStaticProps() {
     props: {
       content: data.data,
     },
-    revalidate: 100,
+    revalidate: 60000,
   };
 }

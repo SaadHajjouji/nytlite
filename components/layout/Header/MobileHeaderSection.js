@@ -1,7 +1,8 @@
 import Image from "next/image";
 import classes from "./MobileHeaderSection.module.scss";
 import { FaBars, FaUser } from "react-icons/fa";
-const MobileHeaderSection = ({todayDate,setShowMobileNavigation}) => {
+import Link from "next/link";
+const MobileHeaderSection = ({ todayDate, setShowMobileNavigation }) => {
   return (
     <section className={classes.mobileHeader}>
       <div className={classes.HeaderTopSectionPhone}>
@@ -12,8 +13,9 @@ const MobileHeaderSection = ({todayDate,setShowMobileNavigation}) => {
           width={220}
           height={31.42}
         />
-
-        <FaUser />
+        <Link href={"/login"}>
+          <FaUser />
+        </Link>
       </div>
       <div className={classes.HeaderBottomSectionPhone}>
         <span className={`${classes.date} ${classes.date1}`}>{todayDate}</span>

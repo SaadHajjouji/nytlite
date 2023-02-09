@@ -35,7 +35,8 @@ const SearchInput = ({ searchInputRef, showSearchInput }) => {
           className={classes.clearInputbtn}
           onClick={(e) => clearSearchInput(e, searchInputRef)}
         >
-          {keyPressed ? "clear" : ""}
+          <span className={keyPressed ? classes.visible : classes.invisible}>clear</span>
+          
         </button>
       </div>
       <button className={classes.btnSearch}>GO</button>
