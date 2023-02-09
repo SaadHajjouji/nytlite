@@ -4,9 +4,11 @@ import LoginPageHeader from "../Header/LoginPageHeader";
 const LoginPageLayout = ({ children }) => {
   return (
     <>
-    <LoginPageHeader/>
-      <main>{children}</main>
-      <LoginPageFooter/>
+      <LoginPageHeader />
+      <main>
+        {children}
+      </main>
+      <LoginPageFooter />
     </>
   );
 };
