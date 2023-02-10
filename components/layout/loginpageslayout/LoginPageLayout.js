@@ -1,6 +1,6 @@
 import React from "react";
 import LoginPageFooter from "../Footer/LoginPageFooter";
-import LoginPageHeader from "../Header/LoginPageHeader";
+import LoginPageHeader from "../Header/LoginPageHeader/LoginPageHeader";
 const LoginPageLayout = ({ children }) => {
   return (
     <>

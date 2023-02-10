@@ -97,3 +97,15 @@
     }
   }
 }
+
+.loggedindash {
+  text-align: center;
+  .logoutbtn {
+    color: white;
+    background-color: black;
+    padding: 8px 13px;
+    font-size: 1.4rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+  }
+}

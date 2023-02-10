@@ -1,0 +1,80 @@
+.SubscribeCard {
+  text-align: center;
+  width: 40vw;
+  padding: 47px 18px;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 12%);
+  position: relative;
+  .title {
+    font-size: 1.7rem;
+    color: #121212;
+  }
+  .prices {
+    font-family: "Domine";
+    font-size: 1.6rem;
+    color: #333;
+    font-weight: lighter;
+    margin-top: 1rem;
+    del {
+      color: rgba(0, 0, 0, 0.37);
+      margin-right: 10px;
+    }
+  }
+  button {
+    display: block;
+    margin: 1rem 0;
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 100%;
+    padding: 14px 0;
+  }
+  .billed {
+    font-size: 14px;
+    color: #333;
+    del {
+      color: rgba(0, 0, 0, 0.37);
+      margin-right: 3px;
+    }
+  }
+  .perks {
+    text-align: left;
+    margin-top: 2rem;
+    font-size: 13px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      font-weight: 200;
+      color: #666666;
+      span {
+        color: #121212;
+        font-weight: 600;
+        margin: 0px 1px 0px 10px;
+      }
+    }
+  }
+}
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background-color: #3078e5;
+  padding: 9px 16px;
+  border-radius: 1rem;
+  color: white;
+  font-size: 11px;
+  font-weight: 300;
+}
+
+.SubscribebtnAll {
+  color: #fff;
+  background-color: #000;
+}
+.SubscribeBtnNoAccess {
+  color: #000;
+  border: 1px solid #000;
+}
+.lightGrey {
+  color: #666666 !important;
+}

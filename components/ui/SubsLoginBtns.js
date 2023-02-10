@@ -4,7 +4,7 @@ import Link from "next/link";
 const SubsLoginBtns = () => {
   return (
     <div className={classes.subsLogin}>
-      <a>SUBSCRIBE FOR $0.25/ WEEK</a>
+      <Link href={"/subscribe"}>SUBSCRIBE FOR $0.25/ WEEK</Link>
       <Link href={"/login"}>LOG IN</Link>
     </div>
   );
