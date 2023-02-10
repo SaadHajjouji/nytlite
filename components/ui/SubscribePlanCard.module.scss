@@ -46,12 +46,11 @@
         margin-bottom: 12px;
       }
       font-weight: 200;
-
       color: #666666;
       span {
         color: #121212;
         font-weight: 600;
-        margin: 0px 4px;
+        margin: 0px 1px 0px 10px;
       }
     }
   }
@@ -75,4 +74,7 @@
 .SubscribeBtnNoAccess {
   color: #000;
   border: 1px solid #000;
+}
+.lightGrey {
+  color: #666666 !important;
 }

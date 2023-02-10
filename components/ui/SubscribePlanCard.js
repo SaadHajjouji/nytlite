@@ -1,6 +1,11 @@
 import React from "react";
 import classes from "./SubscribePlanCard.module.scss";
-import { FaApple, FaCheck, FaFacebook, FaGoogle } from "react-icons/fa";
+import {
+  FaCheck,
+  FaRegWindowClose,
+  FaWindowClose,
+  FaXbox,
+} from "react-icons/fa";
 const SubscribePlanCard = ({ allAccess }) => {
   return (
     <div className={classes.SubscribeCard}>
@@ -30,23 +35,32 @@ const SubscribePlanCard = ({ allAccess }) => {
           1,700 journalists
         </li>
         <li>
-          <FaCheck />
-          <span>Games.</span> Unwind with The Crossword, The Mini, Spelling Bee
-          and more.
+          {allAccess ? <FaCheck /> : <FaWindowClose />}
+          <span className={allAccess ? "" : classes.lightGrey}>
+            Games.
+          </span>{" "}
+          Unwind with The Crossword, The Mini, Spelling Bee and more.
         </li>{" "}
         <li>
-          <FaCheck />
-          <span>Cooking.</span> Enjoy recipes, advice and inspiration for any
-          occasion.
+          {allAccess ? <FaCheck /> : <FaWindowClose />}
+          <span className={allAccess ? "" : classes.lightGrey}>
+            Cooking.
+          </span>{" "}
+          Enjoy recipes, advice and inspiration for any occasion.
         </li>{" "}
         <li>
-          <FaCheck />
-          <span>Wirecutter.</span> Explore independent reviews for thousands of
-          products online.
+          {allAccess ? <FaCheck /> : <FaWindowClose />}
+          <span className={allAccess ? "" : classes.lightGrey}>
+            Wirecutter.
+          </span>{" "}
+          Explore independent reviews for thousands of products online.
         </li>{" "}
         <li>
-          <FaCheck />
-          <span>The Athletic.</span> In-depth, personalized sports journalism.
+          {allAccess ? <FaCheck /> : <FaWindowClose />}
+          <span className={allAccess ? "" : classes.lightGrey}>
+            The Athletic.
+          </span>{" "}
+          In-depth, personalized sports journalism.
         </li>
       </ul>
     </div>
