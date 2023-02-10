@@ -16,6 +16,12 @@ const LoginPageMain = () => {
       setlogged(true);
     }
   }, []);
+  const logout = () => {
+    if (window !== "undefined") {
+      window.localStorage.clear();
+    }
+    setlogged(false);
+  };
   if (!logged) {
     return (
       <>
@@ -62,8 +68,11 @@ const LoginPageMain = () => {
   }
   if (logged)
     return (
-      <div>
-        <h1>you are logged in</h1>
+      <div className={classes.loggedindash}>
+        <h1>This is clearly a fake login</h1>
+        <button className={classes.logoutbtn} onClick={logout}>
+          logout
+        </button>
       </div>
     );
 };
