@@ -11,6 +11,7 @@ const SubscribePageHeader = () => {
           alt="newyorktimes logo"
           width={250}
           height={35.71}
+          className={classes.logo}
         />
       </Link>
 

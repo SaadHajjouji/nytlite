@@ -1,20 +1,28 @@
 import React from "react";
 import classes from "./SubscribePlanCard.module.scss";
 import { FaApple, FaCheck, FaFacebook, FaGoogle } from "react-icons/fa";
-const SubscribePlanCard = () => {
+const SubscribePlanCard = ({ allAccess }) => {
   return (
     <div className={classes.SubscribeCard}>
-      <div className={classes.badge}>Best value</div>
-      <div className={classes.title}>All Access</div>
+      {allAccess ? <div className={classes.badge}>BEST VALUE</div> : ""}
+      <div className={classes.title}> {allAccess ? "All Access" : "News"}</div>
       <div className={classes.prices}>
-        <del>3$</del>
-        $0.50/week
+        <del>{allAccess ? "$3" : "$2"}</del>
+        {allAccess ? "$0.50/week" : "$0.25/week"}
       </div>
       <span className={classes.billed}>
-        Billed <del>$12</del>
-        $2 every four weeks for the first year
+        Billed <del>{allAccess ? "$12" : "$8"}</del>
+        {allAccess
+          ? " $2 every four weeks for the first year"
+          : " $1 every four weeks for the first year"}
       </span>
-      <button>Subscribe now</button>
+      <button
+        className={
+          allAccess ? classes.SubscribebtnAll : classes.SubscribeBtnNoAccess
+        }
+      >
+        Subscribe now
+      </button>
       <ul className={classes.perks}>
         <li>
           <FaCheck />

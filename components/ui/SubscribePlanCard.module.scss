@@ -1,7 +1,7 @@
 .SubscribeCard {
   text-align: center;
   width: 40vw;
-  padding: 47px 20px;
+  padding: 47px 18px;
   max-width: 380px;
   border-radius: 12px;
   box-shadow: 2px 4px 12px rgb(0 0 0 / 12%);
@@ -23,8 +23,6 @@
   }
   button {
     display: block;
-    color: #fff;
-    background-color: #000;
     margin: 1rem 0;
     border-radius: 3px;
     font-size: 1rem;
@@ -63,9 +61,18 @@
   top: -10px;
   right: 20px;
   background-color: #3078e5;
-  padding: 8px 25px;
+  padding: 9px 16px;
   border-radius: 1rem;
   color: white;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 300;
+}
+
+.SubscribebtnAll {
+  color: #fff;
+  background-color: #000;
+}
+.SubscribeBtnNoAccess {
+  color: #000;
+  border: 1px solid #000;
 }

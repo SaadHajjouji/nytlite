@@ -1,6 +1,9 @@
 .subscribePageHeader {
   padding-top: 3.6rem;
   text-align: center;
+  .logo {
+    cursor: pointer;
+  }
   h1 {
     font-family: "Lora";
     font-size: 1.9rem;
