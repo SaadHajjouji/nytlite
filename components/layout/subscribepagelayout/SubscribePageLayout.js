@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "../../../styles/pageInlinePadding.module.scss";
+import SubscribePageFooter from "../Footer/SubscribePageFooter";
 import SubscribePageHeader from "../Header/SubscribePageHeader/SubscribePageHeader";
 import styles from "./SubscribePageLayout.module.scss";
 const SubscribePageLayout = ({ children }) => {
@@ -7,7 +8,7 @@ const SubscribePageLayout = ({ children }) => {
     <div className={`${classes.PageInlinePadding} ${styles.entirePage}`}>
       <SubscribePageHeader />
       <main>{children}</main>
-      <footer></footer>
+      <SubscribePageFooter />
     </div>
   );
 };

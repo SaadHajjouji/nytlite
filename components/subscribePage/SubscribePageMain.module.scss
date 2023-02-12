@@ -1,7 +1,58 @@
-.PlansWraper {
+@import "../../styles/mixins";
+.PlansWrapperDesktop {
   margin: 5rem auto 0px auto;
-  width: 68%;
   background-color: inherit;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1.3rem;
+  @media (max-width: 50em) {
+    display: none;
+  }
+}
+.PlansWrapperPhone {
+  background-color: inherit;
+  margin: 3rem auto 0px auto;
+  box-shadow: 2px 4px 12px rgb(0 0 0 / 12%);
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  @media (min-width: 50em) {
+    display: none;
+  }
+  .switchSection {
+    color: black;
+    display: flex;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    background-color: white !important;
+    border-bottom: 1px solid #e2e2e2;
+    .switchNews,
+    .switchAllAccess {
+      height: 64px;
+      flex: 1 1;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .switchAllAccess {
+      display: flex;
+      flex-direction: column;
+      font-size: 15.7rem;
+      :nth-child(1) {
+        font-size: 11.08px;
+        color: #2671ff;
+      }
+      :nth-child(2) {
+        color: #888888;
+        font-size: 15.6px;
+      }
+    }
+  }
+}
+.borderBottom {
+  border-bottom: 3px solid #121212;
 }

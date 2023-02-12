@@ -1,11 +1,9 @@
-import React from "react";
-import classes from "./SubscribePlanCard.module.scss";
+import classes from "./SubscribePlanCardPhone.module.scss";
 import { FaCheck, FaWindowClose } from "react-icons/fa";
-const SubscribePlanCard = ({ allAccess }) => {
+
+const SubscribePlanCardPhone = ({ allAccess }) => {
   return (
     <div className={classes.SubscribeCard}>
-      {allAccess ? <div className={classes.badge}>BEST VALUE</div> : ""}
-      <div className={classes.title}> {allAccess ? "All Access" : "News"}</div>
       <div className={classes.prices}>
         <del>{allAccess ? "$3" : "$2"}</del>
         {allAccess ? "$0.50/week" : "$0.25/week"}
@@ -62,4 +60,4 @@ const SubscribePlanCard = ({ allAccess }) => {
   );
 };
 
-export default SubscribePlanCard;
+export default SubscribePlanCardPhone;
